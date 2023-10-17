@@ -19,8 +19,8 @@ def indices_invertidos(palabra: dict):
             words = sentence.lower().split()
             for word in words:
                 if word in cache:
-                   cache[word].append(documents)
-                else:
+                    cache[word].append(documents)
+                else:  # Corregida la sangría aquí
                     cache[word] = [documents]
 
-    return cache.get(palabra["palabra"], "No se encontro")
+    return cache.get(palabra["palabra"], "No se encontró")
